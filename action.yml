@@ -1,0 +1,26 @@
+name: 'ghaction-CompressFiles'
+description: 'A GitHub Action for compressing files using Brotli or GZip compression.'
+author: 'sheyenrath'
+branding:
+  icon: 'compress'  
+  color: 'purple'
+inputs:
+  path:
+    description: 'The path'
+    required: true
+    default: '.'
+  extensions:
+    description: 'The file extensions to compress.'
+    required: false
+    default: '.js,.css,.html,.json,.dll'
+  tools:
+    description: 'The compression utility to use.'
+    required: false
+    default: 'brotli,gzip'
+runs:
+  using: 'docker'
+  image: 'docer://sheyenrath/ghaction-compress-files'
+  args:
+    - ${{ inputs.path }}
+    - ${{ inputs.extensions }}
+    - ${{ inputs.tools }}
