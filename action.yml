@@ -17,6 +17,10 @@ inputs:
     description: 'The compression utility to use.'
     required: false
     default: 'brotli,gzip'
+  depth:
+    description: 'Maximum folder depth to process'
+    required: false
+    default: 3
 runs:
   using: 'docker'
   image: 'docker://sheyenrath/ghaction-compress-files'
@@ -24,3 +28,4 @@ runs:
     - ${{ inputs.path }}
     - ${{ inputs.extensions }}
     - ${{ inputs.tools }}
+    - ${{ inputs.depth }}

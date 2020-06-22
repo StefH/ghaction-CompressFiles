@@ -22,6 +22,10 @@ A comma separated list from all the file-extensions you want to compress. Defaul
 
 A comman separated list from the compresion utilities you want to use. Valid values are `brotli` and `gzip`. Default both are used.
 
+#### `depth`
+
+Maximum folder depth to process. Default this is set to `3`
+
 ### Example
 
 ``` yml

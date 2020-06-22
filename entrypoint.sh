@@ -1,11 +1,12 @@
 #!/bin/bash
 
-echo "Processing files in folder '$1'"
-
 IFS=','
 
 read -ra FILE_EXTENSIONS <<< "${2:-.js,.css,.html,.json}"
 read -ra TOOLS <<< "${3:-brotli,gzip}"
+DEPTH=${4:-3}
+
+echo "Processing files in folder '$1' using maximum folder $DEPTH"
 
 for FILE_EXT in "${FILE_EXTENSIONS[@]}"
 do
@@ -13,11 +14,11 @@ do
     do
         case $TOOL in
             gzip)
-                `find $1 -maxdepth 3 -type f -name "*$FILE_EXT" -exec gzip -k -f {} \;`
+                `find $1 -maxdepth $DEPTH -type f -name "*$FILE_EXT" -exec gzip -k -f {} \;`
                 ;;
                 
             brotli)
-                `find $1 -maxdepth 3 -type f -name "*$FILE_EXT" -exec brotli -f {} \;`
+                `find $1 -maxdepth $DEPTH -type f -name "*$FILE_EXT" -exec brotli -f {} \;`
                 ;;
                 
             *)
