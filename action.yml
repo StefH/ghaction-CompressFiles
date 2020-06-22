@@ -2,7 +2,7 @@ name: 'ghaction-CompressFiles'
 description: 'A GitHub Action for compressing files using Brotli or GZip compression.'
 author: 'sheyenrath'
 branding:
-  icon: 'compress'  
+  icon: 'archive'  
   color: 'purple'
 inputs:
   path:
