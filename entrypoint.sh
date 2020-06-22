@@ -6,7 +6,7 @@ read -ra FILE_EXTENSIONS <<< "${2:-.js,.css,.html,.json}"
 read -ra TOOLS <<< "${3:-brotli,gzip}"
 DEPTH=${4:-3}
 
-echo "Processing files in folder '$1' using maximum folder $DEPTH"
+echo "Processing files in folder '$1' using maximum folder depth $DEPTH"
 
 for FILE_EXT in "${FILE_EXTENSIONS[@]}"
 do
