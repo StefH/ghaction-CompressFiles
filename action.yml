@@ -12,7 +12,7 @@ inputs:
   extensions:
     description: 'The file extensions to compress.'
     required: false
-    default: '.js,.css,.html,.json,.dll'
+    default: '.js,.css,.html,.json'
   tools:
     description: 'The compression utility to use.'
     required: false

@@ -4,7 +4,7 @@ echo "Processing files in folder '$1'"
 
 IFS=','
 
-read -ra FILE_EXTENSIONS <<< "${2:-.js,.css,.html,.json,.dll}"
+read -ra FILE_EXTENSIONS <<< "${2:-.js,.css,.html,.json}"
 read -ra TOOLS <<< "${3:-brotli,gzip}"
 
 for FILE_EXT in "${FILE_EXTENSIONS[@]}"

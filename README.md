@@ -16,7 +16,7 @@ The path to find the files. Default this is `.`
 
 #### `extensions`
 
-A comma separated list from all the file-extensions you want to compress. Default this is set to `.js,.css,.html,.json,.dll`
+A comma separated list from all the file-extensions you want to compress. Default this is set to `.js,.css,.html,.json`
 
 #### `tools`
 
@@ -29,6 +29,6 @@ A comman separated list from the compresion utilities you want to use. Valid val
   uses: stefh/ghaction-CompressFiles@v1
   with:
     path: ${{ env.PUBLISH_DIR }}
-    extensions: '.js,.css,.html,.dll'
+    extensions: '.js,.css,.html'
     tools: 'brotli,gzip'
 ```
