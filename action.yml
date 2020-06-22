@@ -19,7 +19,7 @@ inputs:
     default: 'brotli,gzip'
 runs:
   using: 'docker'
-  image: 'docer://sheyenrath/ghaction-compress-files'
+  image: 'docker://sheyenrath/ghaction-compress-files'
   args:
     - ${{ inputs.path }}
     - ${{ inputs.extensions }}
