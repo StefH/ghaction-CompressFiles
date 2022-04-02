@@ -23,6 +23,10 @@ docker tag sheyenrath/ghaction-compress-files:latest sheyenrath/ghaction-compres
 ### 4. Push
 
 ``` cmd
-docker push sheyenrath/ghaction-compress-files:latest
 docker push sheyenrath/ghaction-compress-files:2
+```
+
+_Optional_
+``` cmd
+docker push sheyenrath/ghaction-compress-files:latest
 ```
