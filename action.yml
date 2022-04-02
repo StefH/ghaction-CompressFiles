@@ -20,12 +20,17 @@ inputs:
   depth:
     description: 'Maximum folder depth to process'
     required: false
-    default: 3
+    default: '3'
+  deterministicCompression:
+    description: 'When using "gzip", do not save or restore the original name and timestamp.'
+    required: false
+    default: 'false'
 runs:
   using: 'docker'
-  image: 'docker://sheyenrath/ghaction-compress-files'
+  image: 'docker://sheyenrath/ghaction-compress-files:2'
   args:
     - ${{ inputs.path }}
     - ${{ inputs.extensions }}
     - ${{ inputs.tools }}
     - ${{ inputs.depth }}
+    - ${{ inputs.deterministicCompression }}
