@@ -20,7 +20,7 @@ A comma separated list from all the file-extensions you want to compress. Defaul
 
 #### `tools`
 
-A comman separated list from the compresion utilities you want to use. Valid values are `brotli` and `gzip`. Default both are used.
+A comma separated list from the compresion utilities you want to use. Valid values are `brotli` and `gzip`. Default both are used.
 
 #### `depth`
 
@@ -30,7 +30,7 @@ Maximum folder depth to process. Default this is set to `3`
 
 ``` yml
 - name: CompressFiles
-  uses: stefh/ghaction-CompressFiles@v1
+  uses: stefh/ghaction-CompressFiles@v2
   with:
     path: ${{ env.PUBLISH_DIR }}
     extensions: '.js,.css,.html'
