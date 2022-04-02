@@ -24,7 +24,14 @@ A comma separated list from the compresion utilities you want to use. Valid valu
 
 #### `depth`
 
-Maximum folder depth to process. Default this is set to `3`
+Maximum folder depth to process. Default this is set to `3`.
+
+### `deterministicCompression`
+
+When using "gzip"-compression, do not save or restore the original name and timestamp. 
+Can be used for deterministic builds.
+
+Default this is set to `"false"`.
 
 ### Example
 
